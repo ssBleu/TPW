@@ -1,0 +1,1188 @@
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'pixel_operator_monobold';
+}
+
+body {
+  padding: 0px 0px 0;
+   
+
+/* establece varias imagenes de fondo*/
+  background-image: linear-gradient(100deg,#3A563D,#379425,#202C85,#2856A9,#196E0B,#2B187B
+    );
+
+  /* el tamaño de las imagenes de fondo*/
+  background-size: 500%;
+  animation: FondoAnim 120s infinite;
+}
+
+/* otra forma de usar keyframes es con from to*/
+
+@keyframes FondoAnim{ /* animar moviendo el background*/
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+}
+
+:root {  /*coge todo el doc html, para el modo nocturno*/
+  --body-texto-color:#43EE47;
+  --caja-fondo-color:#272727;
+  --enlace-hover-color: #1A8024;
+  --background-color: ;
+  --footer-y-header-color: #121212;
+}
+
+
+main{
+
+  
+
+  }
+
+
+.div-main-reclamaciones{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 120px;
+  margin-bottom: 120px;
+
+}
+
+.div-main-index{
+
+  margin-left: 120px;
+  margin-right: 120px;
+  margin-top: 80px;
+  margin-bottom: 30px;
+
+  text-align: center;
+
+}
+
+.div-main-categorias{
+  margin-left: 120px;
+  margin-right: 120px;
+  margin-top: 120px;
+  margin-bottom: 30px;
+
+  text-align: center;
+
+}
+
+.div-main-ejercicios{
+  margin-left: 120px;
+  margin-right: 120px;
+  margin-top: 120px;
+  margin-bottom: 30px;
+
+  text-align: center;
+
+}
+
+.div-main-nosotros{
+  margin-left: 120px;
+  margin-right: 120px;
+  margin-top: 120px;
+  margin-bottom: 30px;
+
+  text-align: center;
+
+}
+
+
+
+
+
+.header { 
+  height: 80px; /*tamaño del header*/
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  /*fijar el header y ponerlo encima*/
+  position: fixed;
+    z-index: 1;
+
+  background: var(--footer-y-header-color);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+
+  max-width: 992px;
+  margin: 0 auto;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+/*elementos generales del pafin logo y barra*/
+
+.logo {
+  font-size: 30px;
+
+  padding-left: 10px; /*para acomodar posicion del logo*/
+  padding-right: 40px;
+
+  line-height: 80px;
+}
+
+
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  padding: 0 60px;
+}
+
+.nav-menu-item { /*controlar los bloques*/
+  font-size: 18px;
+  line-height: 80px; /*largo del bloque*/
+  z-index: 1; /*para que aparezca encima*/
+
+}
+
+.nav-menu-link { /*para las cajas */
+  padding: 8px 12px; 
+
+
+}
+
+.nav-menu-link:hover,
+.nav-menu-link_active {
+  background-color: #034574;
+  transition: 0.5s;
+
+}
+
+/* TOGGLE */
+.nav-toggle {
+  color: black;
+  background: none;
+  border: none;
+
+
+  cursor: pointer;
+
+  display: none; /* Para que al inicio no aparezca */
+
+}
+
+
+
+/* MOBILE *//* MOBILE *//* MOBILE */
+
+
+  ul.nav-menu li a { /*dar formato a los links de la lista*/
+
+    display: block; /*las listas se comportan como bloques (para manipular mejor su tamaño/ubicación)*/
+    box-sizing: border-box; /*para modificar las medidas de la caja*/
+
+    text-align: center; 
+
+    padding: 0px 0px 0px 0px; /*tamaño de las cajas*/
+
+    width: 180px ; /*ancho de las cajas*/
+
+
+    /*border-bottom: 1px solid #000; bordes a las cajas*/
+    /*border-top: 1px solid #666; bordes a las cajas*/
+
+
+    background: var(--footer-y-header-color);
+    text-decoration: none; /*para que el texto salga sin nada (sin subrayado)*/
+
+  }
+
+
+  .nav-menu ul { 
+
+    max-height: 0;
+    margin: 0;
+    padding: 0;
+
+    list-style: none; /*sin estilos de lista*/
+
+    overflow: hidden; /*para esconder la lista (para luego mostrarla)*/
+    transition: .3s all ease-in; /*tiempo para ocultarse de la lista oculta*/
+  }
+
+  .nav-menu li li a { /*formato para las listas anidadas*/
+
+
+
+    background: #07700A;
+    color: white;
+
+    font-size: 16px;
+    border: 0; /*caja sin bordes*/
+
+  }
+
+  
+    /* para la transicion*/
+
+  .nav-menu li:hover ul {
+
+    max-height: 400px;  /*espacio donde aparece la lista*/
+    transition: .3s all ease-in;/*tiempo para la aparicion de la lista*/
+  }
+
+  .nav-menu li a:hover {
+    background: #238909;
+    color: white;
+  }
+
+  /* MOBILE *//* MOBILE *//* MOBILE *//* MOBILE *//* MOBILE *//* MOBILE */
+
+/* MOBILE */
+
+
+
+@media (max-width: 870px) { /* LA BASE PARA EL VCAMBIO*/
+  body {
+    padding-top: 0px;
+
+  }
+
+
+
+  .header {
+    height: 80px;
+
+  }
+
+  .logo-nav-link{
+    padding: 0 20px;
+
+
+  }
+
+  ul.nav-menu   { /*dar formato a los links de la lista*/
+
+    padding-top: 0px; /*tamaño de las cajas*/
+    z-index: 1;
+
+ 
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0;
+
+    /*background-color: #2c3e50;un fondo horrible*/
+
+    backdrop-filter: blur(1.5px); /*blur para cuando aparezca eñ menu*/
+
+    position: fixed;/*necesario*/
+
+    top: 80px; /*depende del tamaño de la nueva cabecera*/
+
+    width: 100%;
+    padding: 20px 0;
+
+  /*  height: calc(100% - 60px);
+    overflow-y: auto;*/
+
+    left: 100%;
+    transition: left 0.2s;
+  }
+
+  .nav-menu-item {
+    line-height: 80px; /*distancia entre lineas de texto, tamaño de caja?*/
+
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+    .nav-toggle{ /* Cuando desaparecen las otras barras */
+    padding: 0 90px;
+    padding-bottom: 80px;
+
+  }
+
+  .nav-toggle:hover {/*PROBANDO */
+
+    right: 100%;
+
+  background-color: black;
+  transition: 1s;
+
+
+}
+
+  .nav-menu_visible { /*para que aparezca el menu*/
+    left: 0;
+  }
+
+
+  .nav-toggle:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+}
+
+
+
+/*PARA LIBRO DE RECLAMACIONES*/
+
+
+.contenedor-formulario{
+
+  position: relative;
+  width: 100%;
+
+  max-width: 1000px;/*max para que se ajuste al contenido*/
+  max-height: 1200px; /*max para que se ajuste al contenido*/
+
+  margin: 20px;
+
+
+  background: var(--caja-fondo-color);
+  border: 1px solid var(--body-texto-color);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.contenedor-formulario .cajas-formulario{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor-formulario .cajas-formulario .titulo-formu{
+  margin: 30px;
+}
+
+.contenedor-formulario .cajas-formulario form{
+  position: relative;
+  width: 100%;
+  padding: 0 0 0 75px;
+}
+
+.contenedor-formulario .cajas-formulario form h2{
+  color:  #fff;
+  font-weight: 500;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+.contenedor-formulario .cajas-formulario form .inputs-form{
+
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.contenedor-formulario .cajas-formulario form .inputs-form:last-child{
+  margin-bottom: 0px;
+}
+
+.contenedor-formulario .cajas-formulario form .inputs-form input,
+.contenedor-formulario .cajas-formulario form .inputs-form textarea{
+
+  position: relative;
+  background: transparent;
+  outline: none;
+  border:  none;
+  width: 100%;
+  color: #fff;
+  padding-bottom: 10px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  border-bottom: 2px solid rgba(250, 250, 250, 0.5);
+
+}
+
+.contenedor-formulario .cajas-formulario form .inputs-form textarea{
+  height: 100px;
+}
+
+.contenedor-formulario .cajas-formulario form .inputs-botones input[type="button"]{
+  background: #fff;
+padding: 8px 10px;
+
+  margin-top: -10px;
+  width: 100px;
+  cursor:  pointer;
+  background: #ff5064;
+  color: #fff;
+  font-weight: 400;
+  border: none;
+
+
+  letter-spacing: 4px;
+}
+
+.contenedor-formulario .cajas-formulario form .inputs-botones input[type="button"]:focus{
+  background: #1bfaad;
+  color: #111;
+}
+
+.contenedor-formulario .cajas-formulario form .inputs-botones input[type="reset"]{
+  
+  background: #fff;
+  padding: 8px 10px;
+
+  margin-top: -10px;
+
+  width: 100px;
+  cursor:  pointer;
+  background: #ff5064;
+  color: #fff;
+  font-weight: 400;
+  border: none;
+
+
+
+
+  letter-spacing: 4px;
+}
+
+.contenedor-formulario .cajas-formulario form .inputs-botones input[type="reset"],input[type="button"]{
+  
+  margin-bottom: 40px;
+
+  width: 100px;
+
+    font-size: 18px;
+
+}
+
+
+.contenedor-formulario .cajas-formulario form .inputs-botones input[type="reset"]:focus{
+  background: #1bfaad;
+  color: #111;
+  transition: 1s;
+}
+
+
+
+.contenedor-formulario .cajas-formulario form .inputs-form span{
+  
+
+  position: flex;
+  align-content: space-around;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.5);
+  transition: all 0.5s;
+
+  font-size: 18px;
+
+}
+
+.contenedor-formulario .cajas-formulario form .inputs-form-radio span{
+  
+   position: flex;
+  align-content: space-around;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.5);
+  transition: all 0.5s;
+
+    font-size: 18px;
+}
+
+
+
+
+
+.contenedor-formulario .cajas-formulario form .inputs-form input:focus ~ span,
+.contenedor-formulario .cajas-formulario form .inputs-form textarea:focus ~span,
+.contenedor-formulario .cajas-formulario form .inputs-form input:focus ~ span,
+.contenedor-formulario .cajas-formulario form .inputs-form textarea:focus ~ span{
+  /*/*transform: translateY(-24px); /*para que se mueva al presionar*/
+  color: #1bfaad;
+  font-size: 14px;
+}
+
+.contenedor-formulario .cajas-formulario form .inputs-form input:focus,
+.contenedor-formulario .cajas-formulario form .inputs-form textarea:focus,
+.contenedor-formulario .cajas-formulario form .inputs-form input:focus,
+.contenedor-formulario .cajas-formulario form .inputs-form textarea:focus{
+  border-bottom-color: #fff;
+}
+
+
+
+.contenedor-formulario .imBx{
+  position: relative;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+
+}
+
+.contenedor-formulario .imBx: before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: #ff5064;
+  transform-origin: bottom;
+
+  transform: skewX(-25deg) translateX(10%);
+}
+
+@media (max-width: 991px)
+{
+    /*MEDIA PARA EL contenedor-formulario del FORMULARIO*/
+
+  .contenedor-formulario .cajas-formulario{
+    width: 100%;
+    padding: 0 50px; /*Lo que se achica de lado*/
+  }
+
+  .contenedor-formulario .cajas-formulario form{
+
+    width: 100%;
+    max-width: 500px;
+    padding: 0;
+  }
+
+  .contenedor-formulario .imagen-formu {
+    display: none;
+  }
+}
+
+
+
+/* PARA INDEX - DESTACADOS Y RECOMENDADOS*/
+
+.destacados, .tarjeta-juego{
+
+  display: flex; 
+  text-align: center;
+  align-items: center; /*centrado en el bloque*/
+
+    /*centrar mejor la caja*/
+  padding: 30px;
+
+  /*para la caja ploma-borde verde*/
+  border: 1px solid var(--body-texto-color);
+  margin: 40px;
+
+
+
+  background: var(--caja-fondo-color);
+
+  color: white; 
+}
+
+
+/*para el iframe y los "botones"*/
+
+/*Para el item Destac1"*/
+
+.item-destac1 iframe{
+  display: flex;
+  width: 420px;
+  height: 260px;
+  justify-content: center;
+}
+
+.item-destac1 ul {  /* para las listas ordenadas */
+  list-style-type: none;
+}
+
+.item-destac1 li { /* para todas las listas */
+
+  float: left; /* para que las listas esten en horizontal */
+  
+  margin-right: 35px;
+  margin-top: -10px;
+
+  justify-content: space-between;
+
+}
+
+/*Para el item Destac2"*/
+
+.item-destac2 {
+  display: flex;
+}
+
+
+.item-destac2 a{
+  text-decoration: none;
+  color: white;
+}
+
+.item-destac2 a:hover{ /*vambio de color al pasar el mouse*/
+  color: var(--enlace-hover-color);
+}
+
+
+
+.boton-destacados button:hover{ /*vambio de color al pasar el mouse*/
+
+  background-color:  var(--enlace-hover-color);
+}
+
+.boton-destacados img:hover{ /*vambio de color al pasar el mouse*/
+
+  background-color:  var(--enlace-hover-color);
+}
+
+
+
+.opcion a {
+  opacity: 50%;
+}
+
+
+.item-destac2 a{
+
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  border-bottom: 1px solid var(--body-texto-color);
+  color: var(--body-texto-color);
+  opacity: 100%;
+}
+
+.contenedor-precio-destac{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+
+
+/*para el "boton comprar"*/
+.contenedor-precio-destac button{
+
+  display: flex;
+  align-items: center;
+  justify-content: space-araund;
+
+  color: white;
+  border-radius: 15px;
+  background: var(--body-texto-color);
+
+   font-size: 20px;
+
+}
+
+
+
+.contenedor-precio-destac span{/*span-contenedor de lines*/
+  color: var(--body-texto-color);
+
+  font-size: 25px;
+}
+
+
+
+
+.opcion a:hover {
+  opacity: 100%;
+}
+
+/*INDEX - GRATIS*/
+
+.gratis{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.juegos-gratis{
+
+  flex-basis: calc(33.3% - 50px); /* separacion entre 3columnas 33.3% */ 
+
+}
+
+.juegos-gratis a {
+  text-decoration: none;
+  color: white;
+  opacity: 100%;
+}
+
+.juegos-gratis a:hover{
+  opacity: 80%;
+}
+
+.juegos-gratis h3 {
+  text-decoration: none;
+  opacity: 100%;
+}
+
+.juegos-gratis h3:hover{
+  color: var(--enlace-hover-color);
+
+  }
+
+/* RESPONSIVE PARA LOS CUADROS DEL INDEX Y LAS CATEGORÍAS*/
+
+@media (max-width: 950px) { /* LA BASE PARA EL VCAMBIO*/
+
+
+.destacados, .tarjeta-juego, .gratis{
+
+  display: flex;
+  flex-direction: column ; /*cuando se achique la pantalla los 2 divs en columna*/
+
+}
+
+
+
+}
+
+
+
+/*PARA EL FOOTER*/
+
+footer{
+
+    bottom: 0;
+    left: 0;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    background-color: var(--footer-y-header-color);
+
+}
+
+.copyright-contenedor{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.copyright{
+    font-size: 12px;
+    opacity: 0.7;
+    font-weight: 400;
+    padding: 10px 0;
+}
+
+.footer-menus{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 40%;
+}
+
+.contenedor-footer{
+    height: fit-content;
+    width: 100%;
+    padding: 3rem 6rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.subcontenedores-footer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+footer .titulo-web-logo{
+    margin-bottom: 1.2rem;
+    font-size: calc(1vw + 20px);
+}
+
+.footer-info, .item-footer{
+    margin: 0.2rem 0;
+    opacity: 0.7;
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.item-footer:hover{
+    opacity: 1;
+}
+
+.titulos-footer{
+    font-size: var(--medium-text-font);
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+}
+
+.social-contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+}
+
+
+
+.redes-sociales{
+    height: 100%;
+    width: 30px;
+    background-image: url(../imagenes/FacebookBlanco.png);
+    background-size: 80%;
+    background-position: center;
+    margin-right: 1rem;
+    background-repeat: no-repeat;/*si no se verá la imagen varias veces(como fondo de pantalla)*/
+}
+
+.redes-sociales:hover{
+    opacity: 0.7;
+}
+
+footer .redes-sociales:nth-of-type(2){/*aplica lo mismo a sus hermanos*/
+    background-image: url(../imagenes/TwitterBlanco.png);
+}
+
+footer .redes-sociales:nth-of-type(3){/*aplica lo mismo a sus hermanos*/
+    background-image: url(../imagenes/InstagramBlanco.png);
+}
+
+
+/*MEDIA QUERY*/
+@media (max-width: 768px){
+    
+    .contenedor-footer{
+        padding: 2rem;
+        flex-direction: column;
+    }
+
+    .contenedores-foter{
+        width: 100%;
+        padding: 2rem 0;
+        border-bottom: 1px solid #2A2A2A;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contenedores-foter:nth-of-type(1){
+        align-items: flex-start;
+    }
+    .contenedores-foter:nth-of-type(3){
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .footer-menus{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        border-bottom: 1px solid #2A2A2A;
+    }
+
+    .footer-menus .contenedores-foter:nth-of-type(1){
+        width: 45%;
+        align-items: flex-start;
+        border-bottom: none;
+    }
+    .footer-menus .contenedores-foter:nth-of-type(2){
+        width: 45%;
+        align-items: flex-start;
+        border-bottom: none;
+    }
+}
+
+
+    }
+
+
+/* AVENTURA-PLATAFORMAS-ESTRATEGIA-ACCION-DEPORTES  - ESTAN DENTRO DEL MAIN*/
+
+
+.tarjeta-juego{
+
+  display: flex; 
+  text-align: center;
+  align-items: center; /*centrado en el bloque*/
+
+    /*centrar mejor la caja*/
+  padding: 30px;
+
+  /*para la caja ploma-borde verde*/
+  border: 1px solid var(--body-texto-color);
+  margin: 40px;
+
+
+
+  background: var(--caja-fondo-color);
+
+  color: white; 
+}
+
+
+/*para el iframe y los "botones"*/
+
+/*Para el item Destac1"*/
+
+.item-tarjeta1{
+  display: flex;
+  width: 420px;
+  height: 260px;
+
+  margin:  10px;
+  justify-content: center;
+}
+
+
+/*Para el item Destac2"*/
+
+
+
+
+
+.item-tarjeta2 {
+  display: flex;
+    margin:  10px;
+}
+
+
+.item-tarjeta2 a{
+  text-decoration: none;
+  color: white;
+}
+
+.item-tarjeta2 a:hover{ /*vambio de color al pasar el mouse*/
+  color: var(--enlace-hover-color);
+}
+
+
+.subitem-titulo{
+  display: flex;
+  justify-content: center;
+    margin:  10px;
+}
+
+
+
+.boton-tarjeta button:hover{ /*vambio de color al pasar el mouse*/
+
+  background-color:  var(--enlace-hover-color);
+}
+
+.contenedor-precio-boton{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+    margin:  10px;
+}
+
+
+
+/*para el "boton comprar"*/
+.contenedor-precio-boton button, .subitem-like-dislike button{
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  color: white;
+  border-radius: 15px;
+  background: var(--body-texto-color);
+
+   font-size: 20px;
+
+     margin:  10px;
+
+}
+
+.contenedor-precio-boton input{
+  color: white;
+
+}
+
+.sub-cambio-precio input{
+
+  border-radius: 20px;
+  background: var(--body-texto-color);
+
+  font-size: 20px;
+
+  margin-bottom: 1px;
+}
+
+
+
+.contenedor-precio-boton span{/*span-contenedor de lines*/
+  color: var(--body-texto-color);
+
+  font-size: 25px;
+}
+
+
+
+.subitem-like-dislike button:hover{ /*vambio de color al pasar el mouse*/
+
+  background-color:  var(--enlace-hover-color);
+}
+
+
+
+.subitem-descripcion{
+    margin:  10px;
+}
+
+.subitem-like-dislike{
+  display: flex;
+    justify-content: space-evenly;
+
+     margin:  10px;
+
+}
+
+
+
+.subitem-info{
+  display: flex;
+  justify-content: space-between; /*espacio equitat. "pegados" al margen*/
+
+  padding: 5px;
+  border-bottom: 1px solid #43EE47;
+}
+
+
+
+
+/* SOBRE NOSOTROS*/
+
+
+
+.contenedor-sobrenos{
+
+  display: flex;
+  flex-direction: column;
+
+ }
+
+
+ .formato-ventajas{
+  color: #4C6ACC ;
+ }
+
+
+ .item-nos{
+
+ /* para la caja ploma - borde verde*/
+
+  text-align: center;
+  border: 1px solid #43EE47;
+  border-radius: 30px;
+  padding: 20px;
+  margin-bottom: 0px;
+  margin-top: 30px;
+  background: #272727;
+  color: white; 
+
+ }
+
+ /* SOBRE NOSOTROS- ventajas*/
+
+
+  .contenedor-ventajotas{
+
+     /* para la caja ploma - borde verde*/
+
+  text-align: center;
+  border: 1px solid #43EE47;
+  border-radius: 30px;
+  padding: 20px;
+  background: #272727;
+  color: white; 
+ }
+
+ .contenedor-ventajas{
+
+  display: flex;
+
+  align-items:  flex-start;
+  justify-content:  space-around;
+  text-align: center;
+
+  }
+
+ .ventajitas{
+
+  flex-basis: calc(50% - 40px );
+
+ }
+
+
+
+
+
+
+/* Boton LEER MAS Y MENOS DE JUEGOS GRATIS*/
+
+/* alinear y decorar texto del boton*/
+
+
+.juegos-gratis{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.juegos-gratis button{
+
+  text-decoration: none;
+  color: black;
+  border-radius: 15px;
+  padding: 5px 20px;
+  background: #43EE47;
+
+  font-family: Poppins;
+  font-size: 16px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+    margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+.juegos-gratis button:hover{
+  background: #FA1042;
+  color: #6A98DD;
+}
+
+
+/* !!!para mantener oculto el texto y mostrar*/
+
+.TextoOculto1,.TextoOculto2,.TextoOculto3 {
+  display: none;
+}
+
+.muestraTexto1,.muestraTexto2,.muestraTexto3{ /*para javascript*/
+  display: block;
+}
+

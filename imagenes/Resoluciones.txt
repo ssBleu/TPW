@@ -1,0 +1,7 @@
+The hobbit             -       700 x 985
+Tomb Raider            -       720 x 960
+Sherlock Holmes        -       768 x 978
+Read Dead Redemption   -       720 x 961
+Rust                   -       750 x 1000
+Assassin's Creed       -       853 x 960
+God of War             -       750 x 1000
